@@ -1,30 +1,30 @@
-let main = document.querySelector("#main");
+let menu = document.querySelector("#nav i");
+let cross = document.querySelector("#full i");
 
-let cursor = document.querySelector("#cursor");
+let gt = gsap.timeline();
 
-let imageDiv = document.querySelector("#image");
-
-main.addEventListener("mousemove", function (ullu) {
-  gsap.to(cursor, {
-    x: ullu.x,
-    y: ullu.y,
-    duration: 2,
-    ease: "elastic.out(1,0.2)"
-  });
+gt.to("#full", {
+  right: 0,
+  duration: 0.4,
 });
 
-imageDiv.addEventListener("mouseenter", function () {
-  cursor.innerHTML = "View More";
-  gsap.to(cursor, {
-    scale: 2,
-    backgroundColor: "#ffffff6c",
-  });
+gt.from("#full h4", {
+  x: 100,
+  stagger: 0.2,
+  duration: 0.5,
+  opacity: 0,
 });
 
-imageDiv.addEventListener("mouseleave", function () {
-  cursor.innerHTML = "";
-  gsap.to(cursor, {
-    scale: 1,
-    backgroundColor: "#ffffff",
-  });
+gt.from("#full i", {
+  opacity: 0,
+});
+
+gt.pause();
+
+menu.addEventListener("click", function () {
+  gt.play();
+});
+
+cross.addEventListener("click", function () {
+  gt.reverse();
 });
