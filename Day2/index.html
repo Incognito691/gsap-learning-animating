@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-full h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,28 +8,75 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        font-family: aeonik, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
-  <body>
-    <div id="main">
-      <div id="nav">
-        <h2>GSAP</h2>
-        <i class="ri-menu-3-line"></i>
+  <body class="w-full h-full overflow-x-hidden">
+    <div
+      id="main"
+      class="w-full h-full bg-[lightblue] bg-cover bg-center"
+      style="background-image: url('/images/wallapaper.png')"
+    >
+      <div
+        id="nav"
+        class="flex justify-between items-center px-[50px] py-[40px] text-white"
+      >
+        <h2 class="text-[40px]">GSAP</h2>
+        <i class="ri-menu-3-line text-[30px] font-extrabold cursor-pointer"></i>
       </div>
-      <div id="full">
-        <h4>About</h4>
-        <h4>Services</h4>
-        <h4>Work</h4>
-        <h4>Games</h4>
-        <h4>Contact Us</h4>
 
-        <i class="ri-close-line"></i>
+      <div
+        id="full"
+        class="w-[40%] h-full absolute top-0 right-[-40%] bg-white/40 backdrop-blur-[30px] px-[60px] py-[200px]"
+      >
+        <h4 class="text-[50px] font-medium mb-[10px]">About</h4>
+        <h4 class="text-[50px] font-medium mb-[10px]">Services</h4>
+        <h4 class="text-[50px] font-medium mb-[10px]">Work</h4>
+        <h4 class="text-[50px] font-medium mb-[10px]">Games</h4>
+        <h4 class="text-[50px] font-medium mb-[10px]">Contact Us</h4>
+
+        <i
+          class="ri-close-line absolute top-[5%] right-[10%] bg-white rounded-full p-[5px] font-extrabold text-[20px] cursor-pointer"
+        ></i>
       </div>
     </div>
+
+    <div id="page2" class="relative w-full h-full bg-[#dd9be6]">
+      <div id="overlay" class="absolute w-full h-full bg-black/50 z-10"></div>
+      <img
+        src="/images/sasuke.jpg"
+        alt="Sasuke"
+        class="w-full h-full object-cover absolute"
+      />
+      <h1
+        class="text-[910px] font-medium uppercase text-center absolute z-30 w-full flex items-center text-purple-500 drop-shadow-[0_0_40px_rgba(192,132,252,0.8)] px-20"
+      >
+        SasukeUchiha
+      </h1>
+    </div>
+
+    <div
+      id="page3"
+      class="w-full h-full bg-[#dd9be6] bg-no-repeat bg-cover"
+      style="background-image: url('/images/lasgBg.jpg')"
+    ></div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
